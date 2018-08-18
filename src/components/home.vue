@@ -130,21 +130,18 @@
                 </div>
             </div> -->
                <div class="col-lg-12 mb-5">
-                <h3 class="mb-4 tm-text-gray">Contact Us</h3>
-                <form action="#contact" method="post" class="tm-contact-form">
+                <h3 class="mb-4 tm-text-gray">发表近况</h3>
+               
                     <div class="row">
                         <div class="form-group col-xl-6">
-                            <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name..." required/>
-                        </div>
-                        <div class="form-group col-xl-6">
-                            <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email..." required/>
+                            <input v-model="category" type="text" id="contact_name" name="contact_name" class="form-control" placeholder="分类" required/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Your Message..." required></textarea>
+                        <textarea v-model="comment" id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="近况..." required></textarea>
                     </div>
-                    <button type="submit" class="btn  tm-btn-send">Send It</button>
-                </form>
+                    <button class="btn tm-btn-send" @click="postComments()">发 表</button>
+                
             </div>
         </div>
         <hr>
@@ -152,7 +149,7 @@
         <footer class="row mt-5 mb-5">
             <div class="col-lg-12">
                 <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
-                    <span class="tm-current-year">2018</span> Your Company Name 
+                    <span class="tm-current-year">2018</span> jackyangli.com 
                     
                     | Design: <a href="" class="tm-text-white">Timeless</a>
                 </p>
@@ -168,28 +165,43 @@ export default {
   name: "Home",
   data() {
     return {
-      msg: "Home page",
       videoSrc: videoSource,
-      Comment:null
+      category: "",
+      comment: null
     };
   },
-  mounted(){
+  methods: {
+    postComments() {
+      let MicroBlog = AV.Object.extend("MicroBlog");
+      let microBlog = new MicroBlog();
+      microBlog.set("category", this.category);
+      microBlog.set("comment", this.comment);
+      microBlog.save().then(
+        function(comment) {
+          console.log("objectId is " + comment.id);
+        },
+        function(error) {
+          console.error(error);
+        }
+      );
+    }
+  },
+  mounted() {
     AV.init({
-      appId: '',
-      appKey: ''
-    })
-    var query = new AV.Query('Comment');
-    query.descending('createdAt');
+      appId: "",
+      appKey: ""
+    });
+    var query = new AV.Query("MicroBlog");
+    query.descending("createdAt");
     query.find().then(function(comment) {
       console.log(comment);
-    })
+    });
     // query.find().then(function (lists) {
     //                 // 遍历查找结果
     //                 lists.forEach(function(comment) {
     //                     console.log(comment);
     //                 })
     //             })
-     
   }
 };
 </script>
