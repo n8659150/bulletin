@@ -47,9 +47,11 @@
                             </div>
                             <div class="tm-timeline-description-wrap">
                                 <div class="tm-bg-dark tm-timeline-description">
-                                    <h3 class="tm-text-green tm-font-400">Nulla venenatis purus nec quam</h3>
-                                    <p>You may tell your co-workers about TemplateMo free stuffs to download and use for any website project. Thank you for supporting us.</p>
-                                    <p class="tm-text-green float-right mb-0">New Event . 12 July 2018</p>
+                                    <div>
+                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">Wechat 6.7.1</span>
+                                    </div>
+                                    <p>公告板项目上线。用来记录我的近况，包含生活方面和项目方面。技术栈：前端VueJS,数据存储LeanCloud</p>
+                                    <p class="float-right mb-0">新项目  2018-07-29</p>
                                 </div>
                             </div>
                         </div>
@@ -185,22 +187,6 @@ export default {
           console.error(error);
         }
       );
-    },
-    signupOnce() {
-      // 新建 AVUser 对象实例
-      let user = new AV.User();
-      // 设置用户名
-      user.setUsername("xxxxxx");
-      // 设置密码
-      user.setPassword("xxxxxx");
-      // 设置邮箱
-      user.setEmail("xxx@xxx.com");
-      user.signUp().then(
-        function(loggedInUser) {
-          console.log(loggedInUser);
-        },
-        function(error) {}
-      );
     }
   },
   mounted() {
@@ -225,4 +211,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.tm-category {
+    display: inline-block;
+    padding: .2rem .5rem;
+    background: #ededed;
+    color: #b3b1b1;
+    font-size: .75rem;
+    border-radius: .2rem;
+    margin: 0 .4rem 0 .7rem;
+    vertical-align:text-bottom;
+}
 </style>
