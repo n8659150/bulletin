@@ -141,6 +141,7 @@
                         <textarea v-model="comment" id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="近况..." required></textarea>
                     </div>
                     <button class="btn tm-btn-send" @click="postComments()">发 表</button>
+                    <button class="btn tm-btn-send" @click="signupOnce()">注册管理员</button>
                 
             </div>
         </div>
@@ -183,6 +184,22 @@ export default {
         function(error) {
           console.error(error);
         }
+      );
+    },
+    signupOnce() {
+      // 新建 AVUser 对象实例
+      let user = new AV.User();
+      // 设置用户名
+      user.setUsername("xxxxxx");
+      // 设置密码
+      user.setPassword("xxxxxx");
+      // 设置邮箱
+      user.setEmail("xxx@xxx.com");
+      user.signUp().then(
+        function(loggedInUser) {
+          console.log(loggedInUser);
+        },
+        function(error) {}
       );
     }
   },
