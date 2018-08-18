@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <header class="text-center tm-site-header">
                     <div class="tm-site-logo"></div>
-                    <h1 class="pl-4 tm-site-title">Timeless</h1>
+                    <h1 class="pl-4 tm-site-title">校长碎碎念</h1>
                 </header>
             </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="container tm-container-2">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="tm-welcome-text">Welcome to Timeless</h2>
+                    <h2 class="tm-welcome-text">记录我项目和生活的近况</h2>
                 </div>
             </div>
             <div class="row tm-section-mb">
@@ -47,11 +47,11 @@
                             </div>
                             <div class="tm-timeline-description-wrap">
                                 <div class="tm-bg-dark tm-timeline-description">
-                                    <div>
-                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">Wechat 6.7.1</span>
+                                    <div class="title-group">
+                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">项目</span>
                                     </div>
                                     <p>公告板项目上线。用来记录我的近况，包含生活方面和项目方面。技术栈：前端VueJS,数据存储LeanCloud</p>
-                                    <p class="float-right mb-0">新项目  2018-07-29</p>
+                                    <p class="float-right mb-0 date-created">2018-07-29</p>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +66,12 @@
                                 <p class="mb-0">&nbsp;</p>
                             </div>
                             <div class="tm-timeline-description-wrap">
-                                <div class="tm-bg-dark-light tm-timeline-description">
-                                    <h3 class="tm-text-cyan tm-font-400">Vestibulum ante ipsum primis</h3>
-                                    <p>In imperdiet nisl quis sapien pellentesque, non rhoncus elit sollicitudin. Donec pharetra egestas magna at eleifend. Sed non magna vitae enim tempus faucibus.</p>
-                                    <p class="tm-text-cyan float-right mb-0">Another Story . 9 July 2018</p>
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <div class="title-group">
+                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">项目</span>
+                                    </div>
+                                    <p>公告板项目上线。用来记录我的近况，包含生活方面和项目方面。技术栈：前端VueJS,数据存储LeanCloud</p>
+                                    <p class="float-right mb-0 date-created">2018-07-29</p>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +86,11 @@
                             </div>
                             <div class="tm-timeline-description-wrap">
                                 <div class="tm-bg-dark tm-timeline-description">
-                                    <h3 class="tm-text-yellow tm-font-400">Pellentesque accumsan convallis</h3>
-                                    <p>Suspendisse felis massa, maximus sed mauris at, elementum fermentum nisl. Aliquam quis elit vel ipsum ornare sollicitudin. Nulla et dolor eget nisi varius convallis.</p>
-                                    <p class="tm-text-yellow float-right mb-0">Latest News . 30 June 2018</p>
+                                    <div class="title-group">
+                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">项目</span>
+                                    </div>
+                                    <p>公告板项目上线。用来记录我的近况，包含生活方面和项目方面。技术栈：前端VueJS,数据存储LeanCloud</p>
+                                    <p class="float-right mb-0 date-created">2018-07-29</p>
                                 </div>
                             </div>
                         </div>
@@ -100,10 +104,12 @@
                                 <p class="mb-0">&nbsp;</p>
                             </div>
                             <div class="tm-timeline-description-wrap">
-                                <div class="tm-bg-dark-light tm-timeline-description">
-                                    <h3 class="tm-text-orange tm-font-400">Lorem ipsum dolor sit amet</h3>
-                                    <p>Phasellus at quam facilisis sem congue lacinia. Fusce risus velit, bibendum in magna eu, sollicitudin pellentesque dolor. Nulla facilisi. Fusce libero mauris, maximus et liqula at.</p>
-                                    <p class="tm-text-orange float-right mb-0">New Project . 22 June 2018</p>
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <div class="title-group">
+                                        <span class="tm-title tm-font-400">公告板项目上线</span><span class="tm-category">项目</span>
+                                    </div>
+                                    <p>公告板项目上线。用来记录我的近况，包含生活方面和项目方面。技术栈：前端VueJS,数据存储LeanCloud</p>
+                                    <p class="float-right mb-0 date-created">2018-07-29</p>
                                 </div>
                             </div>
                         </div>
@@ -114,36 +120,21 @@
             </div>
             <!--  row -->
             <hr>
-            <!-- <div class="row tm-section-mb tm-section-mt">
-                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
-                    <h3 class="mt-2 mb-3 tm-text-gray">Nunc dictum consequat</h3>
-                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
-                    pharetra neque et eleifend venenatis.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
-                    <h3 class="mt-2 mb-3 tm-text-gray">Morbi ultrices tellus</h3>
-                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
-                    pharetra neque et eleifend venenatis.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h3 class="mt-2 mb-3 tm-text-gray">Suspendisse dolor tortor</h3>
-                    <p>Integer imperdiet aliquet lobortis. In in metus risus. Pellentesque pulvinar venenatis dui id rutrum. In
-                    pharetra neque et eleifend venenatis.</p>
-                </div>
-            </div> -->
                <div class="col-lg-12 mb-5">
                 <h3 class="mb-4 tm-text-gray">发表近况</h3>
                
                     <div class="row">
                         <div class="form-group col-xl-6">
-                            <input v-model="category" type="text" id="contact_name" name="contact_name" class="form-control" placeholder="分类" required/>
+                            <input v-model="title" type="text" id="comment_title" name="comment_title" class="form-control" placeholder="标题" required/>
+                        </div>
+                        <div class="form-group col-xl-6">
+                            <input v-model="category" type="text" id="comment_category" name="comment_category" class="form-control" placeholder="分类" required/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea v-model="comment" id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="近况..." required></textarea>
+                        <textarea v-model="comment" id="comment_message" name="comment_message" class="form-control" rows="6" placeholder="近况..." required></textarea>
                     </div>
                     <button class="btn tm-btn-send" @click="postComments()">发 表</button>
-                    <button class="btn tm-btn-send" @click="signupOnce()">注册管理员</button>
                 
             </div>
         </div>
@@ -169,6 +160,7 @@ export default {
   data() {
     return {
       videoSrc: videoSource,
+      title: "",
       category: "",
       comment: null
     };
@@ -177,6 +169,7 @@ export default {
     postComments() {
       let MicroBlog = AV.Object.extend("MicroBlog");
       let microBlog = new MicroBlog();
+      microBlog.set("title", this.title);
       microBlog.set("category", this.category);
       microBlog.set("comment", this.comment);
       microBlog.save().then(
@@ -189,11 +182,13 @@ export default {
       );
     }
   },
-  mounted() {
+  created() {
     AV.init({
       appId: "",
       appKey: ""
     });
+  },
+  mounted() {
     var query = new AV.Query("MicroBlog");
     query.descending("createdAt");
     query.find().then(function(comment) {
@@ -212,13 +207,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .tm-category {
-    display: inline-block;
-    padding: .2rem .5rem;
-    background: #ededed;
-    color: #b3b1b1;
-    font-size: .75rem;
-    border-radius: .2rem;
-    margin: 0 .4rem 0 .7rem;
-    vertical-align:text-bottom;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #ededed;
+  color: #b3b1b1;
+  font-size: 0.75rem;
+  border-radius: 0.2rem;
+  margin: 0 0.4rem 0 0.7rem;
+  vertical-align: text-bottom;
+}
+.title-group {
+  margin-bottom: 0.75rem;
+}
+.date-created {
+  color: #9b9b9b;
 }
 </style>

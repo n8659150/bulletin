@@ -1,6 +1,7 @@
 body {
-    background-color: #333333;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    /* box-shadow: 0 40px 100px rgba(0,0,0,.2); */
+    /* color: #fff; */
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-weight: 300;
     overflow-x: hidden;
@@ -22,7 +23,7 @@ h3 {
 .tm-site-logo {
     width: 40px;
     height: 40px;
-    border: 7px solid white;
+    border: 7px solid #404040;
     transform: rotate(45deg);
     display: inline-block;
     vertical-align: middle;
@@ -63,6 +64,7 @@ h3 {
     max-width: 1280px;
     max-height: 640px;
     overflow-y: hidden;
+    border: 2px solid #404040;
 }
 
 .tm-video-text {
@@ -104,7 +106,7 @@ h3 {
 }
 
 .tm-text-gray {
-    color: #CCCCCC;
+    /* color: #CCCCCC; */
 }
 
 .tm-text-white {
@@ -116,28 +118,18 @@ a.tm-text-white:focus {
     color: #FFFFFF;
 }
 
-.tm-text-green {
-    color: #99CC66;
-}
-
-.tm-text-cyan {
-    color: #33CCCC;
-}
-
-.tm-text-yellow {
-    color: #FFFF66;
-}
-
-.tm-text-orange {
-    color: #CC9966;
+.tm-title {
+    color:#1abc9c;
+    font-size:1.3rem;
 }
 
 .tm-bg-dark {
-    background-color: #262626;
+    /* background-color: hsl(211, 20%, 97%); */
 }
 
 .tm-bg-dark-light {
-    background-color: #404040;
+    background-color: #fff;
+    border: 2px solid #404040;
 }
 
 hr {
@@ -163,6 +155,7 @@ hr {
     height: 160px;
     display: inline-block;
     vertical-align: middle;
+    border: 2px solid #404040;
 }
 
 .tm-timeline-connector {
@@ -184,6 +177,7 @@ hr {
     border-radius: 20px;
     padding: 35px 40px;
     max-width: 712px;
+    border: 2px solid #404040;
 }
 
 .tm-section-mb {
@@ -201,7 +195,7 @@ hr {
 .form-control {
     border-radius: 0;
     border-color: #666666;
-	color: #CCC;
+    /* color: #212529; */
     background: transparent;
     padding: 12px 15px;
 }
@@ -238,31 +232,32 @@ iframe {
     font-size: 1.1rem;
     padding: 12px 50px;
     background: transparent;
-    border: 1px solid #CCCCCC;
-    color: #CCCCCC;
+    border: 1px solid #404040;
+    color: #404040;
 }
 
 .tm-btn-send:hover,
 .tm-btn-send:focus {
-    background: #CCCCCC;
-    color: #333333;
+    background: #404040;
+    color: #fff;
 }
 
 .form-control:focus {
     background-color: transparent;
     border-color: #CCCCCC;
-	color: #FFF;
+    /* color: #FFF; */
     box-shadow: 0 0 0 0.2rem #cccccc14;
 }
 
 input,
 textarea,
 [contenteditable] {
-    caret-color: #FFFFFF;
+    /* caret-color: #FFFFFF; */
 }
 
 p {
     line-height: 1.9;
+    color: #555;
 }
 
 @media (min-width: 1200px) {
