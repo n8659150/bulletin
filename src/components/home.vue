@@ -120,8 +120,8 @@
             </div>
             <!--  row -->
             <hr>
-               <div class="col-lg-12 mb-5">
-                <h3 class="mb-4 tm-text-gray">发表近况</h3>
+               <div class="col-lg-12 mb-5" v-if="currentUser">
+                <h3 class="mb-4 tm-text-gray">{{userInfo.username}},发表近况 <a href="" @click="logout()">[注 销]</a></h3>
                
                     <div class="row">
                         <div class="form-group col-xl-6">
@@ -138,14 +138,14 @@
                 
             </div>
         </div>
-        <hr>
+        <hr v-if="currentUser">
         <!-- Footer -->
         <footer class="row mt-5 mb-5">
             <div class="col-lg-12">
                 <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
                     <span class="tm-current-year">2018</span> jackyangli.com 
                     
-                    | Design: <a href="" class="tm-text-white">Timeless</a>
+                    | Design: Timeless
                 </p>
             </div>
         </footer>
@@ -165,6 +165,12 @@ export default {
     };
   },
   methods: {
+    logout() {
+      AV.User.logOut();
+      let currentUser = AV.User.current();
+      currentUser === null ? alert("注销成功") : alert("注销失败，请检查网络");
+      this.$router.push({ path: "/" });
+    },
     postComments() {
       let MicroBlog = AV.Object.extend("MicroBlog");
       let microBlog = new MicroBlog();
@@ -181,7 +187,19 @@ export default {
       );
     }
   },
-  
+  created() {
+    // 获取当前登录用户状态
+    this.currentUser = AV.User.current();
+    // 如果已经登录则获取用户信息
+    if (this.currentUser) {
+      this.userInfo = {
+        username: this.currentUser.get("username")
+      };
+    } else {
+      console.log("当前未登录，正在跳转登录页面");
+      //   this.$router.push('/login')
+    }
+  },
   mounted() {
     var query = new AV.Query("MicroBlog");
     query.descending("createdAt");

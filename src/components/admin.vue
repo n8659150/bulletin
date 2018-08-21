@@ -31,7 +31,7 @@ export default {
       let _this = this;
       AV.User.logIn(_this.username, _this.password).then(function(loggedInUser) {
         console.log(loggedInUser);
-        (loggedInUser._sessionToken !== null)?(_this.$router.push({path:'/dashboard'})):(_this.$router.push({path:'/admin'}))
+        (loggedInUser._sessionToken !== null)?(_this.$router.push({path:'/'})):(alert('登录失败,请检查网络'));
       }, function (error) {
         alert('用户名密码错误');
       });
