@@ -154,7 +154,6 @@
 
 <script>
 import videoSource from "@/assets/video.mp4";
-
 export default {
   name: "Home",
   data() {
@@ -182,12 +181,7 @@ export default {
       );
     }
   },
-  created() {
-    AV.init({
-      appId: "",
-      appKey: ""
-    });
-  },
+  
   mounted() {
     var query = new AV.Query("MicroBlog");
     query.descending("createdAt");
