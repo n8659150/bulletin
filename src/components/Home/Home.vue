@@ -19,6 +19,9 @@
                 <span class="tm-current-year">2018</span> jackyangli.com | Design: Timeless
             </p>
         </div>
+        <div class="col-lg-12 text-center" style=" margin:10px;font-size:12px;">
+          <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        </div>
     </footer>
   </div>
 </template>
