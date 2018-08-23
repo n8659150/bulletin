@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-lg-12">
-            <div class="tm-video-container" style="overflow:hidden;">
+            <div class="tm-video-container">
             <video id="tm-welcome-video" class="tm-welcome-video" autoplay loop muted>
                 <source :src="videoSrc" type="video/mp4"> Your browser does not support the video tag.
             </video>
