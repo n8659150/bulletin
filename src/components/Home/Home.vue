@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       videoSrc: videoSource,
-      subTitle:"记录我项目和生活的近况",
+      subTitle:"项目，生活，近况",
       microblogs:null
     };
   },
