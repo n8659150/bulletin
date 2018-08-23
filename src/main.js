@@ -5,8 +5,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 Vue.config.productionTip = false
-const APP_ID = ''
-const APP_KEY = ''
+const APP_ID = 'Ehf9GzQfKQ0iCs1QAnvLPHdC-gzGzoHsz'
+const APP_KEY = '1Ytly1IgCHU5CNcCms2mzMpn'
 AV.init({
   appId: APP_ID,
   appKey: APP_KEY
