@@ -48,7 +48,7 @@
                         <div class="tm-timeline-description-wrap">
                             <div class="tm-bg-dark tm-timeline-description">
                                 <div class="title-group">
-                                    <span class="tm-title tm-font-400">{{microblog.attributes.title}}</span><span class="tm-category">{{microblog.attributes.category}}</span>
+                                    <span class="tm-title tm-font-400">{{microblog.attributes.title}}</span><span class="tm-category">{{microblog.attributes.category}}</span><a class="tm-github" :href="microblog.attributes.github" v-if="microblog.attributes.github.length > 0"><img src="@/assets/github.png" alt="github"></a>
                                 </div>
                                 <p>{{microblog.attributes.comment}}</p>
                                 <p class="float-right mb-0 date-created">{{microblog.createdAt.getFullYear()}}-{{microblog.createdAt.getMonth() + 1}}-{{microblog.createdAt.getUTCDate()}}</p>
@@ -67,11 +67,14 @@
         <h3 class="mb-4 tm-text-gray">{{userInfo.username}},发表近况 <a href="" @click="logout()">[注 销]</a></h3>
         
             <div class="row">
-                <div class="form-group col-xl-6">
-                    <input v-model="title" type="text" id="comment_title" name="comment_title" class="form-control" placeholder="标题" required/>
+                <div class="form-group col-xl-4">
+                    <input v-model="title" type="text" id="comment_title" name="comment_title" class="form-control" placeholder="标题" required />
                 </div>
-                <div class="form-group col-xl-6">
-                    <input v-model="category" type="text" id="comment_category" name="comment_category" class="form-control" placeholder="分类" required/>
+                <div class="form-group col-xl-4">
+                    <input v-model="category" type="text" id="comment_category" name="comment_category" class="form-control" placeholder="分类" required />
+                </div>
+                <div class="form-group col-xl-4">
+                    <input v-model="github" type="text" id="comment_github" name="comment_github" class="form-control" placeholder="github" required />
                 </div>
             </div>
             <div class="form-group">
@@ -102,6 +105,7 @@ export default {
       videoSrc: videoSource,
       title: "",
       category: "",
+      github: "",
       comment: null,
       microblogs: null
     };
@@ -125,6 +129,7 @@ export default {
       let microBlog = new MicroBlog();
       microBlog.set("title", this.title);
       microBlog.set("category", this.category);
+      microBlog.set("github", this.github);
       microBlog.set("comment", this.comment);
       microBlog.save().then(
         function(comment) {
@@ -155,6 +160,7 @@ export default {
     query.descending("createdAt");
     query.find().then(function(microblogs) {
       _this.microblogs = microblogs;
+      console.log(microblogs);
     });
     // query.find().then(function (lists) {
     //                 // 遍历查找结果
@@ -177,6 +183,10 @@ export default {
   border-radius: 0.2rem;
   margin: 0 0.4rem 0 0.7rem;
   vertical-align: text-bottom;
+}
+.tm-github {
+  vertical-align: super;
+  margin-left: 0.25rem;
 }
 .title-group {
   margin-bottom: 0.75rem;
