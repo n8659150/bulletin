@@ -26,7 +26,6 @@
                         </div>
                     </h1>
                 </div>
-                <!-- <img src="https://picsum.photos/g/1920/1080/?random" alt="" > -->
                 </div>
             </div>
         </div>
@@ -151,7 +150,6 @@ export default {
       };
     } else {
       console.log("当前为游客界面");
-      //   this.$router.push('/login')
     }
   },
   mounted() {
@@ -162,12 +160,6 @@ export default {
       _this.microblogs = microblogs;
       console.log(microblogs);
     });
-    // query.find().then(function (lists) {
-    //                 // 遍历查找结果
-    //                 lists.forEach(function(comment) {
-    //                     console.log(comment);
-    //                 })
-    //             })
   }
 };
 </script>
